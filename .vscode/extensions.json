@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"heybourn.headwind",
+		"dbaeumer.vscode-eslint",
+		"bradlc.vscode-tailwindcss"
+	]
+}

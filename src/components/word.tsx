@@ -10,8 +10,6 @@ type WordProps = {
 
 export function Word({ word, translation, k }: WordProps) {
 	async function handleClick() {
-		console.log(translation);
-
 		await fetch('http://localhost:3000/api', {
 			method: 'POST',
 			body: JSON.stringify({

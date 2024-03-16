@@ -23,10 +23,10 @@ export default async function Home() {
 }
 
 function parseWord(word: string, translations: Object, key: Key): JSX.Element | string {
-  const newWord = word.replace(/[\.,?!]/g, "");
+  const newWord = word.replace(/[,.\s]/, "");
   if (translations.hasOwnProperty(newWord.toLocaleLowerCase())) {
     //@ts-ignore
-    return <Word word={newWord} translation={translations[newWord.toLocaleLowerCase() as keyof Object]} k={key} />
+    return <Word word={word} translation={translations[newWord.toLocaleLowerCase() as keyof Object]} k={key} />
   }
   return word + ' ';
 }

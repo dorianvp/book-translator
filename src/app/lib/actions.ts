@@ -55,8 +55,6 @@ export async function updateProducts(items: MenuData) {
 				.catch(err => {
 					console.log(err);
 				})
-		} else if (item.type == ItemType.Table) {
-
 		}
 	})
 	return

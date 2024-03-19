@@ -12,7 +12,10 @@ app.prepare().then(async () => {
 	const httpServer = createServer(server);
 	const io = new Server(httpServer, {
 		cors: {
-			origin: 'http://localhost:3000'
+			origin: [
+				'http://localhost:3000',
+				'https://book-translator-gamma.vercel.app'
+			]
 		}
 	});
 
@@ -20,7 +23,7 @@ app.prepare().then(async () => {
 		console.log('Client connected');
 
 		socket.on('data', (data) => {
-			console.log('Recieved ::', data)
+			console.log('Received ::', data)
 			io.emit('data', data);
 		})
 	});

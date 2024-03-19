@@ -14,7 +14,7 @@ app.prepare().then(async () => {
 		cors: {
 			origin: [
 				'http://localhost:3000',
-				'https://book-translator-gamma.vercel.app'
+				'https://book-translator-production.up.railway.app'
 			]
 		}
 	});

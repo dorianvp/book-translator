@@ -10,7 +10,8 @@ type WordProps = {
 
 export function Word({ word, translation, k }: WordProps) {
 	async function handleClick() {
-		await fetch('http://localhost:3000/api', {
+		const HOST = process.env.NODE_ENV == 'production' ? 'https://book-translator-production.up.railway.app' : 'http://localhost:3000';
+		await fetch(`${HOST}/api`, {
 			method: 'POST',
 			body: JSON.stringify({
 				translation: translation

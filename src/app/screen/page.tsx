@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const HOST = process.env.NODE_ENV == 'production' ? 'https://book-translator-gamma.vercel.app/' : 'http://localhost:3000';
+const HOST = process.env.NODE_ENV == 'production' ? 'https://book-translator-production.up.railway.app' : 'http://localhost:3000';
 
 const socket = io(HOST);
 
